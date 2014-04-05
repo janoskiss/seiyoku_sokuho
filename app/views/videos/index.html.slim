@@ -15,9 +15,3 @@ table
         td = video.url
         td = video.deleted_at
         td = link_to 'Show', video
-        td = link_to 'Edit', edit_video_path(video)
-        td = link_to 'Destroy', video, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Video', new_video_path
