@@ -45,4 +45,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'slim-rails'
+
 gem 'nokogiri', '~> 1.6'
+gem 'paranoia'
