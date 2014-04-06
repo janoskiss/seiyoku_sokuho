@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
+ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
+gem 'pg',      group: [:production]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -48,7 +50,7 @@ group :development do
   gem 'pry-rails', '~> 0.3'
 end
 
-gem 'slim-rails'
+gem 'slim-rails', '~> 2.1'
 
 gem 'nokogiri', '~> 1.6'
 gem 'paranoia', '~> 2.0'
