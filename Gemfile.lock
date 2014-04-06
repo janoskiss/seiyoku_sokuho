@@ -125,7 +125,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   nokogiri (~> 1.6)
-  paranoia
+  paranoia (~> 2.0)
   rails (= 4.0.4)
   sass-rails (~> 4.0.2)
   sdoc

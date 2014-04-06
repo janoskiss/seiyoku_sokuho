@@ -47,4 +47,4 @@ end
 gem 'slim-rails'
 
 gem 'nokogiri', '~> 1.6'
-gem 'paranoia'
+gem 'paranoia', '~> 2.0'
