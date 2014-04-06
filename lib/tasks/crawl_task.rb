@@ -2,11 +2,9 @@ require "open-uri"
 require "uri"
 require "nokogiri"
 
-require "pp"
-
 class Tasks::CrawlTask
   BASE_URI    = "http://www.xvideos.com/"
-  SEARCH_PATH = "tags/japanese/s:rating/m:allduration/"
+  SEARCH_PATH = "tags/japanese/s:rating/m:allduration/d:day"
 
   def self.execute
     endpoint = URI.join(BASE_URI, SEARCH_PATH)
