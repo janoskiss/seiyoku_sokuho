@@ -44,6 +44,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+  gem 'pry-rails', '~> 0.3'
+end
+
 gem 'slim-rails'
 
 gem 'nokogiri', '~> 1.6'
