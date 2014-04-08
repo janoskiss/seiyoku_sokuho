@@ -51,6 +51,7 @@ group :development do
 end
 
 gem 'slim-rails', '~> 2.1'
+gem 'bootstrap-sass', '~> 3.1.1.0'
 
 gem 'nokogiri', '~> 1.6'
 gem 'paranoia', '~> 2.0'
