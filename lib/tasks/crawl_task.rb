@@ -3,15 +3,17 @@ require "uri"
 require "nokogiri"
 
 class Tasks::CrawlTask
-  BASE_URI    = "http://www.xvideos.com/"
-  SEARCH_PATH = "tags/japanese/s:rating/m:allduration/d:day"
+  BASE_URL   = "http://www.xvideos.com/"
+  CRAWL_PATH = "tags/japanese/s:rating/m:allduration/d:day"
 
   def self.execute
-    endpoint = URI.join(BASE_URI, SEARCH_PATH)
+    endpoint = URI.join(BASE_URL, CRAWL_PATH)
     context  = Nokogiri.HTML(open(endpoint))
 
     context.css("#content .mozaique .thumbBlock .thumbInside").each do |video|
-      url       = URI.join(BASE_URI, video.css(".thumb a").attribute("href")).to_s
+      path      = video.css(".thumb a").attribute("href")
+
+      url       = URI.join(BASE_URL, path).to_s
       thumbnail = video.css(".thumb a").children.attribute("src").text
       title     = video.css("p a").children.text
 
