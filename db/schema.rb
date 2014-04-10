@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140410144900) do
+ActiveRecord::Schema.define(version: 20140410155421) do
 
   create_table "videos", force: true do |t|
-    t.string   "code",       limit: 16
+    t.string   "code",                   limit: 16
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "thumbnail"
     t.string   "title"
+    t.datetime "next_check_deletion_at"
   end
 
 end
