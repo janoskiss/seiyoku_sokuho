@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140410155421) do
+ActiveRecord::Schema.define(version: 20140413152824) do
 
   create_table "videos", force: true do |t|
     t.string   "code",                   limit: 16
@@ -22,5 +22,7 @@ ActiveRecord::Schema.define(version: 20140410155421) do
     t.string   "title"
     t.datetime "next_check_deletion_at"
   end
+
+  add_index "videos", ["code"], name: "index_videos_on_code", unique: true
 
 end
