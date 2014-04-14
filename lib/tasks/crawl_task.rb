@@ -10,11 +10,14 @@ class Tasks::CrawlTask
     context  = Nokogiri.HTML(open(endpoint))
 
     context.css("#content .mozaique .thumbBlock .thumbInside").each do |video|
-      code      = video.css(".thumb a").attribute("href").text.slice(/(?<=\/video)\d+/)
-      thumbnail = video.css(".thumb a").children.attribute("src").text
-      title     = video.css("p a").children.text
+      path = video.css(".thumb a").attribute("href").text
 
-      Video.create(code: code, thumbnail: thumbnail, title: title)
+      Video.create(
+        code:      path.slice(/(?<=\/video)\d+/),
+        thumbnail: video.css(".thumb a").children.attribute("src").text,
+        title:     video.css("p a").children.text,
+        next_deletion_detection_at: Video.next_deletion_detection_at(Time.now)
+      )
     end
   end
 end
