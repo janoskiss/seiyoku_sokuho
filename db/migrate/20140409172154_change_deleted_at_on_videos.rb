@@ -1,4 +1,4 @@
-class ChangeDeletedAtToVideos < ActiveRecord::Migration
+class ChangeDeletedAtOnVideos < ActiveRecord::Migration
   def up
     change_column :videos, :deleted_at, :datetime
   end
