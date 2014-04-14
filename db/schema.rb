@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140413152824) do
+ActiveRecord::Schema.define(version: 20140414155502) do
 
   create_table "videos", force: true do |t|
-    t.string   "code",                   limit: 16
+    t.string   "code",                       limit: 16
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "thumbnail"
     t.string   "title"
-    t.datetime "next_check_deletion_at"
+    t.datetime "next_deletion_detection_at"
   end
 
   add_index "videos", ["code"], name: "index_videos_on_code", unique: true
