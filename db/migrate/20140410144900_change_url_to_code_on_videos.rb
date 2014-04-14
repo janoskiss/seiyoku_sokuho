@@ -2,7 +2,7 @@ class ChangeUrlToCodeOnVideos < ActiveRecord::Migration
   def up
     execute("select id, url from videos").each do |video|
       code = video["url"].slice(/(?<=\/video)\d+/)
-      execute("update videos set url = \"#{code}\" where id = #{video["id"]}")
+      execute("update videos set url = '#{code}' where id = #{video["id"]}")
     end
 
     rename_column :videos, :url, :code
