@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
   def index
-    @videos = Video.scoped.page params[:page]
+    @videos = Video.page params[:page]
   end
 end
