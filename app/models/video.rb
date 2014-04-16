@@ -9,7 +9,7 @@ class Video < ActiveRecord::Base
   validates :title,     presence: true
   validates :next_deletion_detection_at, presence: true
 
-  default_scope -> { order("created_at DESC") }
+  scope :recent, lambda { order("created_at DESC") }
 
   paginates_per 16
 
@@ -17,7 +17,7 @@ class Video < ActiveRecord::Base
     def objects_of_deletion_detection(now)
       self
        .where("next_deletion_detection_at < ?", now)
-       .reorder("next_deletion_detection_at ASC")
+       .order("next_deletion_detection_at ASC")
     end
 
     def next_deletion_detection_at(now)
