@@ -2,8 +2,13 @@ doctype html
 html
   head
     title Pvideos
+    meta name="viewport" content="width=device-width"
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
+    .navbar.navbar-fixed-top.navbar-inverse role="navigation"
+      .container
+        .navbar-header
+          a.navbar-brand href="#" PVIDEOS
     = yield
