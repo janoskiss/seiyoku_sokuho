@@ -3,7 +3,7 @@ require "uri"
 require "nokogiri"
 
 class Tasks::CrawlTask
-  CRAWL_PATH = "tags/japanese/s:rating/m:allduration/d:day"
+  CRAWL_PATH = "tags/japanese/s:rating/m:allduration/d:today"
 
   def self.execute
     endpoint = URI.join(Video::BASE_URL, CRAWL_PATH)
