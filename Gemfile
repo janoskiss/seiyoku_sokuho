@@ -38,7 +38,7 @@ end
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -46,7 +46,9 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development do
   gem 'pry-rails', '~> 0.3'
@@ -55,6 +57,6 @@ end
 gem 'slim-rails', '2.1.4'
 gem 'bootstrap-sass', '~> 3.1.1.0'
 gem 'kaminari', '~> 0.15.1'
-
 gem 'nokogiri', '~> 1.6'
 gem 'paranoia', '~> 2.0'
+gem 'foreman', '~> 0.63'
