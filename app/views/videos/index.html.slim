@@ -5,6 +5,5 @@
         a.thumbnail href=video.url
           img.resize src=video.thumbnail alt=video.title
   .row.center
-    - isMobile = request.user_agent.include?('Android') | request.user_agent.include?('Mobile')
-    = paginate @videos, window: isMobile ? 1 : 3
+    = paginate @videos, window: window_size
 footer
