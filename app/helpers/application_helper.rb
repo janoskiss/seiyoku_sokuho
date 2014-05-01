@@ -1,5 +1,7 @@
 module ApplicationHelper
   def mobile?
-    request.user_agent.include?('Android') || request.user_agent.include?('Mobile')
+    request.user_agent.tap do |ua|
+      return ua.include?('Android') || ua.include?('Mobile')
+    end
   end
 end
