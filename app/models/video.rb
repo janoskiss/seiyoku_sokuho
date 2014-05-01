@@ -25,11 +25,11 @@ class Video < ActiveRecord::Base
     end
 
     def deletion_detection_interval
-      24.hours
+      12.hours
     end
 
     def diffuseness_of_deletion_detection
-      rand(24.hours)
+      rand(12.hours)
     end
   end
 

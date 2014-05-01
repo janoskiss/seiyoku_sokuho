@@ -1,4 +1,7 @@
 Pvideos::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   root to: "videos#index", via: :get
 
   resources :videos, only: :index
