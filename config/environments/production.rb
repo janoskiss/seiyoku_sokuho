@@ -79,5 +79,5 @@ Pvideos::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # for active_admin
-  config.action_mailer.default_url_options = { host: "pvideos.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "seiyoku.herokuapp.com" }
 end
