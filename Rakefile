@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Pvideos::Application.load_tasks
+SeiyokuSokuho::Application.load_tasks

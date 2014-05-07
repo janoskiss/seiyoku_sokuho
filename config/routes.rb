@@ -1,4 +1,4 @@
-Pvideos::Application.routes.draw do
+SeiyokuSokuho::Application.routes.draw do
   root to: "videos#index", via: :get
 
   resources :videos, only: :index
