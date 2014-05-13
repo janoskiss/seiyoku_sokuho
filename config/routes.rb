@@ -1,7 +1,7 @@
 SeiyokuSokuho::Application.routes.draw do
   root to: "videos#index", via: :get
 
-  resources :videos, only: :index
+  resources :videos, only: [:index,:show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

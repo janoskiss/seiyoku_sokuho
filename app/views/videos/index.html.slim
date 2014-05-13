@@ -2,7 +2,7 @@
   .row
     - @videos.each do |video|
       .col-xs-6.col-sm-4.col-md-3.col-lg-3
-        a.thumbnail href=video.url
+        = link_to(video, class: 'thumbnail') do
           img.resize src=video.thumbnail alt=video.title
   .row.center
     = paginate @videos, window: window_size

@@ -1,6 +1,7 @@
 class Video < ActiveRecord::Base
-  BASE_URL    = "http://www.xvideos.com/"
-  CODE_PREFIX = "video"
+  BASE_URL       = "http://www.xvideos.com/"
+  BASE_EMBED_URL = "http://flashservice.xvideos.com/embedframe/"
+  CODE_PREFIX    = "video"
 
   acts_as_paranoid
 
@@ -35,5 +36,9 @@ class Video < ActiveRecord::Base
 
   def url
     BASE_URL + CODE_PREFIX + self.code
+  end
+
+  def embed_url
+    BASE_EMBED_URL + self.code
   end
 end
