@@ -58,3 +58,6 @@ gem 'kaminari', '~> 0.15.1'
 
 gem 'nokogiri', '~> 1.6'
 gem 'paranoia', '~> 2.0'
+gem 'redis', '~> 3.0'
+gem 'redis-objects', '~> 0.9'
+gem 'redis-namespace', '~> 1.4'
